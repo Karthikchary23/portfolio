@@ -18,12 +18,12 @@ const Navbar = () => {
     image: null,
   });
 
-  const [isAdmin, setIsAdmin] = useState(false);
+  const [IsAdmin1234567890, setIsAdmin] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     // Check if admin session exists
-    const adminSession = localStorage.getItem("isAdmin") === "true";
+    const adminSession = localStorage.getItem("IsAdmin1234567890") === "true";
     setIsAdmin(adminSession);
 
     // Fetch home data
@@ -44,7 +44,7 @@ const Navbar = () => {
   return (
     <div>
       {/* Navbar - User and Admin Version */}
-      <div className={`bg-${isAdmin ? 'gray-900' : 'slate-700'} h-16 flex items-center justify-between px-6 shadow-lg`}>
+      <div className={`bg-${IsAdmin1234567890 ? 'gray-900' : 'slate-700'} h-16 flex items-center justify-between px-6 shadow-lg`}>
         <div className="flex items-center">
           <img
             src={home.image}
@@ -52,18 +52,18 @@ const Navbar = () => {
             className="w-10 h-10 rounded-full"
           />
           <span className="text-white text-lg font-semibold ml-2">
-            {isAdmin ? 'Admin Dashboard' : 'My Portfolio'}
+            {IsAdmin1234567890 ? 'Admin Dashboard' : 'My Portfolio'}
           </span>
         </div>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-6">
-          {isAdmin ? (
+          {IsAdmin1234567890 ? (
             <>
-              <Link href="/Admin/home" className="text-white hover:text-blue-300 transition duration-200">Home</Link>
-              <Link href="/Admin/adminabout" className="text-white hover:text-blue-300 transition duration-200">Admin About</Link>
-              <Link href="/Admin/adminproject" className="text-white hover:text-blue-300 transition duration-200">Admin Projects</Link>
-              <Link href="/Admin/admincertificate" className="text-white hover:text-blue-300 transition duration-200">Admin Certificates</Link>
+              <Link href="/AdMin12345678906209/home" className="text-white hover:text-blue-300 transition duration-200">Home</Link>
+              <Link href="/AdMin12345678906209/adminabout" className="text-white hover:text-blue-300 transition duration-200">Admin About</Link>
+              <Link href="/AdMin12345678906209/adminproject" className="text-white hover:text-blue-300 transition duration-200">Admin Projects</Link>
+              <Link href="/AdMin12345678906209/admincertificate" className="text-white hover:text-blue-300 transition duration-200">Admin Certificates</Link>
             </>
           ) : (
             <>
@@ -104,12 +104,12 @@ const Navbar = () => {
       <div
         className={`md:hidden ${isMenuOpen ? "block" : "hidden"} bg-slate-700 p-4`}
       >
-        {isAdmin ? (
+        {IsAdmin1234567890 ? (
           <>
-            <Link href="/Admin/home" className="block text-white hover:text-blue-300 transition duration-200">Home</Link>
-            <Link href="/Admin/adminabout" className="block text-white hover:text-blue-300 transition duration-200">Admin About</Link>
-            <Link href="/Admin/adminproject" className="block text-white hover:text-blue-300 transition duration-200">Admin Projects</Link>
-            <Link href="/Admin/admincertificate" className="block text-white hover:text-blue-300 transition duration-200">Admin Certificates</Link>
+            <Link href="/AdMin12345678906209/home" className="block text-white hover:text-blue-300 transition duration-200">Home</Link>
+            <Link href="/AdMin12345678906209/adminabout" className="block text-white hover:text-blue-300 transition duration-200">Admin About</Link>
+            <Link href="/AdMin12345678906209/adminproject" className="block text-white hover:text-blue-300 transition duration-200">Admin Projects</Link>
+            <Link href="/AdMin12345678906209/admincertificate" className="block text-white hover:text-blue-300 transition duration-200">Admin Certificates</Link>
           </>
         ) : (
           <>
@@ -121,10 +121,10 @@ const Navbar = () => {
           </>
         )}
         {/* Logout Button for Admin */}
-        {isAdmin && (
+        {IsAdmin1234567890 && (
           <button
             onClick={() => {
-              localStorage.removeItem("isAdmin");
+              localStorage.removeItem("IsAdmin1234567890");
               setIsAdmin(false);
               router.push("/");
             }}

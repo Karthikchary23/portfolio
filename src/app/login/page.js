@@ -12,8 +12,8 @@ export default function Login() {
     try {
       const userCredential = await signInWithEmailAndPassword(auth, data.email, data.password);
       // Setting admin session
-      localStorage.setItem("isAdmin", true); // Set to true if the user is an admin
-      router.push("Admin/home");
+      localStorage.setItem("IsAdmin1234567890", true); // Set to true if the user is an admin
+      router.push("AdMin12345678906209/home");
       alert("User logged in successfully!");
     } catch (error) {
       console.error("Error logging in:", error.message);
